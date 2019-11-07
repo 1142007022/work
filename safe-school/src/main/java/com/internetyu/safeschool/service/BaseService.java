@@ -11,8 +11,10 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public abstract class BaseService {
 
-    void send(ChannelHandlerContext channelHandlerContext, SafeSchoolPacket safeSchoolPacket){
+    void send(ChannelHandlerContext channelHandlerContext, SafeSchoolPacket safeSchoolPacket) {
         channelHandlerContext.write(safeSchoolPacket);
     }
+
+    abstract Object soService(ChannelHandlerContext channelHandlerContext, SafeSchoolPacket safeSchoolPacket);
 
 }
