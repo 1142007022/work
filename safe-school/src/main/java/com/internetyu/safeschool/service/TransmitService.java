@@ -15,8 +15,4 @@ public class TransmitService {
 
     public void start(ChannelHandlerContext channelHandlerContext, SafeSchoolPacket safeSchoolPacket){
     }
-
-   /* public static void main(String[] args) {
-        System.out.println(Integer.valueOf("0001"));
-    }*/
 }
