@@ -1,6 +1,5 @@
 package com.internetyu.safeschool.netty.coder;
 
-import com.internetyu.safeschool.netty.packet.PacketHeader;
 import com.internetyu.safeschool.netty.packet.SafeSchoolPacket;
 import com.internetyu.safeschool.util.DataUtils;
 import io.netty.buffer.ByteBuf;

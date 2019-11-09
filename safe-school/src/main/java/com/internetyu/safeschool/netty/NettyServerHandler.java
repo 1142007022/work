@@ -25,7 +25,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext channelHandlerContext) throws Exception {
         log.info("收到连接:{}", channelHandlerContext);
-        SpringUtils.getBean(Sender.class).send("direct", "test");
+        SpringUtils.getBean(Sender.class).send("direct-queue1", "test");
     }
 
     /**

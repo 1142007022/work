@@ -4,6 +4,8 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,8 +18,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DirectConfig {
 
-    @Bean
+    @Bean(name = "direct-queue")
     public Queue directQueue(){
+        return new Queue("direct",false); //队列名字，是否持久化
+    }
+
+    @Bean(name = "direct-queue1")
+    public Queue directQueue1(){
         return new Queue("direct",false); //队列名字，是否持久化
     }
 
@@ -27,7 +34,7 @@ public class DirectConfig {
     }
 
     @Bean
-    Binding binding(Queue queue, DirectExchange exchange){
+    Binding binding(@Qualifier("direct-queue") Queue queue, DirectExchange exchange){
         return BindingBuilder.bind(queue).to(exchange).with("direct");
     }
 
