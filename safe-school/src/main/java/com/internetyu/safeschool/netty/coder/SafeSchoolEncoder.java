@@ -35,7 +35,7 @@ public class SafeSchoolEncoder extends ByteToMessageDecoder {
      */
     private SafeSchoolPacket buildPacket(byte[] data) {
         //todo
-        SafeSchoolPacket safeSchoolPacket = new SafeSchoolPacket();
+        /*SafeSchoolPacket safeSchoolPacket = new SafeSchoolPacket();
         safeSchoolPacket.setFlag(new byte[]{0X55, (byte) 0XAA});
         PacketHeader packetHeader = new PacketHeader();
         packetHeader.setCmd(0X8000);
@@ -46,7 +46,8 @@ public class SafeSchoolEncoder extends ByteToMessageDecoder {
         packetHeader.setSerialNumber(0X123456);
         safeSchoolPacket.setHeader(packetHeader);
         safeSchoolPacket.setBody(new byte[]{0X01, 0X02, 0X03});
-        return safeSchoolPacket;
+        return safeSchoolPacket;*/
+        return null;
     }
 
 }
