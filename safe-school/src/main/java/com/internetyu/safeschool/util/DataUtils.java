@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.zip.CRC32;
 
 public class DataUtils {
-    private static final String TAG = "DataUtil";
+    //private static final String TAG = "DataUtil";
     //协议转义标识字符
     public static final int MSG_IDENTIFY_INT = 0x7F;
     public static final byte[] MSG_IDENTIFY = {0x7F};

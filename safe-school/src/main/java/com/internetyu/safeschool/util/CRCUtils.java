@@ -76,11 +76,6 @@ public class CRCUtils {
     }
 
     public static void main(String[] args) {
-        /*java.lang.String ip = "218.17.157.214";
-        System.out.println(ip.getBytes().length);
-        System.out.println(new java.lang.String(ip.getBytes()));
-        */
-
         byte[] test = new byte[]{0X10,0X11};
         String res = getCrc16(test);
         System.out.println(res);
