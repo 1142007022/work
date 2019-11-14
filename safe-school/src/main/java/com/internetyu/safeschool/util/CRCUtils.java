@@ -74,15 +74,4 @@ public class CRCUtils {
         }
         return startVal;
     }
-
-    public static void main(String[] args) {
-        byte[] test = new byte[]{0X10,0X11};
-        String res = getCrc16(test);
-        System.out.println(res);
-
-        byte[] intRes = DataUtils.integerTo2Bytes(getCrc16Int(test));
-        System.out.println(intRes.toString());
-        System.out.println(DataUtils.bytes2HexString(intRes));
-
-    }
 }
